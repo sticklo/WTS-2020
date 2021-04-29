@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: sans-serif;
+    background: url("../images/blured.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(84, 48, 84, 0.344);
+    height: 100%;
+  }
+
+  #general {
+      width: 375px;
+      height: 100vh;
+
+      background: url('../images/blured.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      
+      margin: 0 auto;
+      padding: 3.5vh 0 0 0;
+
+      .close {
+        color: rgba(138, 52, 138, 0.344);
+        font-size: 30px;
+        padding: 12px;
+        clip-path: circle();
+        background-color: #f3e6f0b4;
+        width: fit-content;
+        position: relative;
+        left: 85%;
+        transform: scale(.85);
+        margin-bottom: 9vh;
+      }
+
+      .soundwaves {
+          img {
+              width: 100%;
+          }
+      }
+
+      .overlay {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 0 10%;
+        margin: 2.5vh 0;
+
+        .album-cover {
+            position: relative;
+            z-index: 10;
+        }
+        .disk {
+            position: relative;
+            z-index: 5;
+            left: -115px;
+            top: 7.5px;
+        }
+      }
+
+      .platforms {
+        ul {
+            background-color: #f3e6f0;
+            margin: 0 auto;
+            margin-bottom: 7.5px;
+            border-radius: 35px;
+            padding: 8.5px 15px;
+            width: 235px;
+            list-style-type: none;
+            display: flex;
+
+            li:first-child {
+                margin-right: 10px;
+
+                img {
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+        }
+    }  
+}
+
+.spotify, .apple-music, .audiomack {
+    padding-top: 5px;
+}
+
+
+@media (max-width: 565px) {
+    #general {
+        background: none;
+    }
+}
+
+@media (max-width: 380px) {
+    #general {
+        width: 100%;
+    }
+}
+
+@media (min-width: 336px) and (max-width: 360px) {
+    #general {
+        .overlay {
+            transform: scale(0.8);
+            padding: 0 7.5%;
+        }
+    }
+}
+
+@media (max-width: 335px) {
+    body {
+        transform: scale(.85);
+    }
+
+    #general > .overlay {
+        padding: 0 5% 0 0;
+    }
+}
+
+
+@media (max-height: 595px) {
+    #general {
+        padding: 2vh 0 0 0;
+
+        .close {
+            margin-bottom: 4vh;
+        }
+    }
+    
+}
+
+@media (max-height: 545px) {
+    #general {
+        padding: .5vh 0 0 0;
+
+        .close {
+            margin-bottom: 2vh;
+        }
+    }
+    
+}
+
+@media (min-height: 850px) {
+    #general {
+        padding: 6.5vh 0 0 0;
+
+        .close {
+            margin-bottom: 12.5vh;
+        }
+
+        div:nth-child(2), div:nth-child(3), & > ul {
+            margin: 5vh 0;
+        }
+
+        & > ul > ul {
+            margin: 3.5vh 0;
+        }
+    }
+    
+}
+
+// @media (min-height: 1000px) and (min-width: 768px) {
+//     #general {
+//         padding: 13vh 0 0 0;
+//         transform: scale(1.3);
+//     }
+// }
